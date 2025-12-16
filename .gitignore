@@ -1,0 +1,17 @@
+# Python Environment & Cache
+# Ngăn không cho đẩy thư mục môi trường ảo và cache lên GitHub
+venv/
+__pycache__/
+*.pyc
+*.o
+*.so
+
+# IDE (Visual Studio Code)
+# Tùy chọn: Ngăn đẩy các cài đặt cá nhân của VSC
+.vscode/
+
+# Data Files & Output
+# Ngăn không cho đẩy file Excel và các file tạm khác
+*.xlsx
+*.xls
+*.csv
