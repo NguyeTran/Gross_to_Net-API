@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api-service:
+    build: .
+    image: gross-to-net:latest
+    container_name: python_gross_to_net_app
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
