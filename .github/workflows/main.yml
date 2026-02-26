@@ -1,15 +1,21 @@
-name: CI/CD for Gross_to_Net
-on: [push, pull request]
+name: Python CI/CD Pipeline
+
+on: [push, pull_request]
 
 jobs:
-  test: kiem tra logic
-    runs-on: ubuntu latest
+  test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: set up Python
+
+      - name: Set up Python
         uses: actions/setup-python@v5
-        with: python-version: '3.12'
-      - name: install dependencies
-        run: pip install pytest ...
-      - name: runtest
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          pip install pytest pandas openpyxl fastapi uvicorn python-multipart xlsxwriter
+
+      - name: Run Tests
         run: python -m pytest tests/
