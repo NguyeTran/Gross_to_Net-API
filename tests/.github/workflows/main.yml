@@ -1,0 +1,15 @@
+name: CI/CD for Gross_to_Net
+on: [push, pull request]
+
+jobs:
+  test: kiem tra logic
+    runs-on: ubuntu latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up Python
+        uses: actions/setup-python@v5
+        with: python-version: '3.12'
+      - name: install dependencies
+        run: pip install pytest ...
+      - name: runtest
+        run: python -m pytest tests/

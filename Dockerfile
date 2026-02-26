@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py calculator.py ./
 
-EXPOSE 5000
+EXPOSE 5000 
 
 CMD ["python", "main.py"]
